@@ -14,17 +14,17 @@
 
     <style>
       body {
-        background-color: #228B22 !important; /* fondo verde tipo mesa */
+        background-color: #228B22 !important;
         min-height: 100vh;
         margin: 0;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 20px;
       }
 
       .card-custom {
-        width: 180px;
-        height: 250px;
         background-color: white;
         border: 1px solid #000;
         border-radius: 10px;
@@ -54,7 +54,14 @@
     </style>
   </head>
   <body>
+    <div class="d-flex gap-2">
+      <input type="number" id="widthInput" placeholder="Width (px)" class="form-control" style="width: 140px;" />
+      <input type="number" id="heightInput" placeholder="Height (px)" class="form-control" style="width: 140px;" />
+      <button id="generateBtn" class="btn btn-primary">Generate New Card</button>
+    </div>
+
     <div id="card-container"></div>
-    <script type="module" src="/app.js"></script>
+
+    <script src="app.js"></script>
   </body>
 </html>
